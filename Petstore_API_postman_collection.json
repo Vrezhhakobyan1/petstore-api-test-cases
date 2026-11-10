@@ -1,0 +1,118 @@
+{
+  "info": {
+    "_postman_id": "b31abb42-87f9-466d-83f8-5bf0ad5f6f4c",
+    "name": "Petstore API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "24092963"
+  },
+  "item": [
+    {
+      "name": "Finds Pets by status",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://petstore.swagger.io/v2/pet/findByStatus?status=sold",
+          "protocol": "https",
+          "host": [
+            "petstore",
+            "swagger",
+            "io"
+          ],
+          "path": [
+            "v2",
+            "pet",
+            "findByStatus"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "sold"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Find pet by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/pet/1776082702",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "pet",
+            "1776082702"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add a new pet to the store",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"id\": 1555,\r\n\"category\": {\r\n\"id\": 1555,\r\n\"name\": \"JulBars\"\r\n},\r\n\"name\": \"Zilan\",\r\n\"photoUrls\": [\r\n\"string\"\r\n],\r\n\"tags\": [\r\n{\r\n\"id\": 1555,\r\n\"name\": \"JulBars\"\r\n}\r\n],\r\n\"status\": \"available\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/pet",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "pet"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Uploads an image",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "additionalMetadata",
+              "value": "dog photo",
+              "type": "text"
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": [
+                "/C:/Users/Vrezh/Desktop/Zilan.png"
+              ]
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{baseUrl}}/pet/1555/uploadImage",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "pet",
+            "1555",
+            "uploadImage"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
